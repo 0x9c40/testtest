@@ -16,7 +16,7 @@ async function getABI() {
     return JSON.parse(data.result);
 }
 
-console.log('ABI:', await getABI())
+console.log('ABI :', await getABI())
 
 const UNI = new Token(
   ChainId.GÖRLI,
