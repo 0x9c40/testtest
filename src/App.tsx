@@ -6,17 +6,17 @@ import { ChainId, Token, WETH, Pair, TokenAmount, Route, Trade, TradeType } from
 
 // console.log("tokenData", tokenData)
 
-// const ETHERSCAN_API_URL = "https://api.etherscan.io/api";
-// const CONTRACT_ADDRESS = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
-// const API_KEY = "4BW0VR0F1995U5G9AWNIN9TC9DKGWUXWSZ";
+const ETHERSCAN_API_URL = "https://api.etherscan.io/api";
+const CONTRACT_ADDRESS = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
+const API_KEY = "4BW0VR0F1995U5G9AWNIN9TC9DKGWUXWSZ";
 
-// async function getABI() {
-//     const response = await fetch(`${ETHERSCAN_API_URL}?module=contract&action=getabi&address=${CONTRACT_ADDRESS}&apikey=${API_KEY}`);
-//     const data = await response.json();
-//     return JSON.parse(data.result);
-// }
+async function getABI() {
+    const response = await fetch(`${ETHERSCAN_API_URL}?module=contract&action=getabi&address=${CONTRACT_ADDRESS}&apikey=${API_KEY}`);
+    const data = await response.json();
+    return JSON.parse(data.result);
+}
 
-// console.log('ABI:', await getABI())
+console.log('ABI:', await getABI())
 
 const UNI = new Token(
   ChainId.GÖRLI,
